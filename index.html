@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	
+	<title>Attunity UI</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css">
+</head>
+<body>
+	<div id="testOne"></div>
+	<div id="testTwo"></div>
+	<div id="testThree"></div>
+
+	<div class="container">
+		<div class="page-header">
+		<h1 class="mainHeader">Attunity UI</h1>
+		</div>
+
+		<div class="jumbotron">
+			<div id="serList">
+			<a class="dropHeader">Select Server:</a><br>
+			<select name="serd" id="serdId" onchange="serChange()">
+				
+			</select>
+			</div>
+
+			<div id="envListSer1">
+			<br>
+			<a class="dropHeader">Select Environment:</a><br>
+			<select name="env1" id="envId1" onchange="envSelectCheck(this)">
+				<option selected>Select</option>
+				<option value="dev1" id="devOptionSer1">DEV</option>
+				<option value="qa1" id="qaOptionSer1">QA</option>
+				<option value="prod1" id="prodOptionSer1">PROD</option>
+			</select>
+			</div>
+			
+			<div id="tasList">
+				<a class="dropHeader">All Task in Selected Environment:</a><br>
+				<select name="tasName" id="tasId" onchange="">
+				
+				</select>
+			</div>
+			
+			<div id="tasAllList">
+				<a class="dropHeader">All Task in Selected Server:</a><br>
+				<select name="tasAllName" id="tasAllId" onchange="">
+				
+				</select>
+			</div>
+		</div>
+		
+		<div class="listOfTask">
+			<table class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<td colspan="3">Attunity Task</td>
+					</tr>
+				</thead>
+				<tbody id="taskTableBody">
+
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+	
+	<div class="myFooter">
+		<br><br><br><br>
+	</div>
+	
+	<script src="main.js" type="text/javascript"></script>
+	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
+
